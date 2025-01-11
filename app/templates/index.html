@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPulse - Real-time Crypto Prices</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to CryptoPulse</h1>
+            <p>Get real-time cryptocurrency prices for your favorite coins</p>
+            <form action="/search" method="POST" class="search-form">
+                <input type="text" name="coin_name" placeholder="Enter Coin Name (e.g., Bitcoin)" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Crypto Prices Section -->
+    <section class="crypto-prices">
+        <h2>Popular Cryptocurrencies</h2>
+        <div class="crypto-cards">
+            {% if crypto_prices %}
+                <div class="crypto-card">
+                    <h3>Bitcoin (BTC)</h3>
+                    <p>Price in USD: ${{ crypto_prices['bitcoin']['usd'] }}</p>
+                    <p>Price in INR: ₹{{ crypto_prices['bitcoin']['inr'] }}</p>
+                </div>
+                <div class="crypto-card">
+                    <h3>Ethereum (ETH)</h3>
+                    <p>Price in USD: ${{ crypto_prices['ethereum']['usd'] }}</p>
+                    <p>Price in INR: ₹{{ crypto_prices['ethereum']['inr'] }}</p>
+                </div>
+            {% else %}
+                <p>Unable to fetch prices at the moment. Please try again later.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by CryptoPulse | &copy; 2022</p>
+    </footer>
+</body>
+</html>
