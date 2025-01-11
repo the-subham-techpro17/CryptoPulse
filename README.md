@@ -1,6 +1,3 @@
-# CryptoPulse
-
-
 ```markdown
 # CryptoPulse
 
@@ -109,10 +106,6 @@ Feel free to fork the project and submit pull requests. Make sure to follow the 
 5. Push your changes to your forked repository.
 6. Open a pull request.
 
-## License
 
-This project is open-source and available under the [MIT License](LICENSE).
-
----
 
 
