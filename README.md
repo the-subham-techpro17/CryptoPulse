@@ -1,5 +1,6 @@
+## CryptoPulse
 ```markdown
-# CryptoPulse
+
 
 CryptoPulse is a real-time cryptocurrency price tracking web application. It allows users to check the current prices of cryptocurrencies in multiple currencies, including USD and INR, and provides a user-friendly interface to view real-time data.
 
